@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="container" *ngIf="!flag">
+    <div *ngIf="dados">
+      <div class="cabecalho">
+        <h3>{{dados.nome}}</h3>
+        <div>
+          <h5>{{dados.ideologia}}</h5>
+          <p>{{dados.redes}}</p>
+        </div>
+      </div>
+
+      <div class="corpo">
+        <h2>Coleta</h2>
+        <div class="tempo">
+          <input type="date" [(ngModel)]="data"/>
+          <input type="time" [(ngModel)]="hora"/>
+        </div>
+
+        <div class="post">
+
+          <h5>Imagem ou Vídeo?</h5>
+
+          <select name="post" [(ngModel)]="imagem" (change)="getImagem()">
+            <option value="Foto">Foto</option>
+            <option value="Vídeo">Vídeo</option>
+          </select>
+        </div>
+
+        <div class="post" *ngIf="proximaImagem">
+
+          <h5>Tem símbolo de:</h5>
+
+          <select name="post" [(ngModel)]="bandeira">
+            <option value="Brasil">Bandeira Brasil</option>
+            <option value="Partido">Bandeira Partido</option>
+          </select>
+        </div>
+
+        <div class="post">
+
+          <h5>Qual o tema da postagem?</h5>
+
+          <select name="post" [(ngModel)]="tema">
+            <option value="Religião">Religião</option>
+            <option value="Costumes">Costumes</option>
+            <option value="Violência">Violência</option>
+            <option value="Economia">Economia</option>
+            <option value="Direitos">Direitos</option>
+            <option value="Racismo">Racismo</option>
+            <option value="COnspiração">Conspiração</option>
+            <option value="Indefinido">Indefinido</option>
+          </select>
+        </div>
+
+        <div class="post">
+
+          <h5>Já foi definida como fakenews pela mídia?</h5>
+
+          <select name="post" [(ngModel)]="fakenews">
+            <option value="Fakenews">Sim</option>
+            <option value="Verdadeiro">Não</option>
+          </select>
+        </div>
+
+        <div class="post">
+
+          <h5>Número de curtidas:</h5>
+          <input type="text" [(ngModel)]="curtidas"/>
+        </div>
+
+        <div class="post">
+
+          <h5>Número de comentários:</h5>
+          <input type="text" [(ngModel)]="comentarios"/>
+        </div>
+
+        <button (click)="enviar()">Resultado</button>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <div class="container" *ngIf="flag">
+    <app-resultados
+    [hora]="hora"
+    ></app-resultados>
+  </div>
+</div>

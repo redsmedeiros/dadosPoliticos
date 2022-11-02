@@ -1,0 +1,72 @@
+.home{
+  padding: 1rem;
+
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+
+}
+
+.input{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+
+}
+
+.form input{
+  border: none;
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+}
+
+.ideologia{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 0px;
+}
+
+.ideologia h5{
+  margin: 0;
+  padding: 7px;
+  color: black;
+  font-weight: bold;
+}
+
+.ideologia select{
+  margin: 0;
+  border: none;
+  background-color: gold;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.ideologia select:hover{
+  opacity: 0.3;
+}
+
+a{
+  width: 200px;
+  height: 30px;
+  border: none;
+  background-color: gold;
+  color: black;
+  font-weight: bold;
+  border-radius: 50px;
+  margin-top: 3rem;
+  text-align: center;
+  padding: 10px 3px 0px;
+}
+
+a:hover{
+  background-color: black;
+  color: gold;
+}
+
+

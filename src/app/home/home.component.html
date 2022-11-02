@@ -1,0 +1,73 @@
+<div class="home">
+  <h1>Insira os Dados do Político:</h1>
+
+  <div class="form">
+      <div class="input">
+        <input type="text" [(ngModel)]="nome" placeholder="Nome:"/>
+      </div>
+
+      <div class="input">
+        <input type="text" placeholder="Partido:"/>
+      </div>
+
+      <div class="ideologia">
+
+          <h5>Ideologia:</h5>
+
+
+          <select name="ideologia" [(ngModel)]="ideologia">
+            <option value="Esquerda">Esquerda</option>
+            <option value="CentroE">Centro-E</option>
+            <option value="CentroD">Centro-D</option>
+            <option value="Direita">Direita</option>
+          </select>
+
+
+      </div>
+
+      <div class="ideologia">
+
+        <h5>Gênero:</h5>
+
+
+        <select name="genero" [(ngModel)]="genero">
+          <option value="Feminino">Feminino</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Lgbt">LGBT</option>
+        </select>
+
+      </div>
+
+      <div class="ideologia">
+
+        <h5>Raça:</h5>
+
+
+        <select name="raca" [(ngModel)]="raca">
+          <option value="Negro">Negro</option>
+          <option value="Branco">Branco</option>
+          <option value="Pardo">Pardo</option>
+          <option value="Índio">Índio</option>
+        </select>
+
+      </div>
+
+      <div class="ideologia">
+
+        <h5>Redes Sociais:</h5>
+
+
+        <select name="redes" [(ngModel)]="redes">
+          <option value="Facebook">Facebook</option>
+          <option value="Twitter">Twitter</option>
+          <option value="Instagram">Instagram</option>
+        </select>
+
+      </div>
+
+      <a [routerLink]="['/dados']" (click)="enviar()">Iniciar</a>
+  </div>
+
+
+
+</div>
